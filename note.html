@@ -1,0 +1,143 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Graphic Resources - Author note</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+* {box-sizing:border-box;}
+body{background-color:#233C56;color:#FFF;font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;font-size: calc(15px + 6 * ((100vw - 320px) / 680));padding:0;margin:0 auto;}
+html{scroll-behavior: smooth;}
+
+
+.image-container {display:block;width:100%;height:auto;margin:0 auto;padding:4em 0em 4em;background-image: url(bkup/assets/camgirl_cloud_header.jpg);background-size: cover;background-repeat:no-repeat;background-position:center; background-attachment:fixed;text-align:center;}
+.header{display:block;width:70%;height:auto;margin:0 auto;text-align:center;}
+.text {display:block;background-color: rgba(255,255,255,0.50);color: black;font-size: calc(15px + 6 * ((100vw - 320px) / 680)); font-weight: 700;margin: 0 auto;padding:.3em 1em .3em;width: 80%;height:auto;text-align: center;top: 50%;left: 50%;mix-blend-mode: screen;text-shadow:0 1px 1px #000;}
+#nav{display:block;width:100%;height:auto;margin:0 auto;float:none;clear:left;text-align:center;box-sizing:border-box;background: rgb(22,51,70);
+background: -moz-linear-gradient(0deg, rgba(22,51,70,1) 0%, rgba(19,36,64,1) 100%);
+background: -webkit-linear-gradient(0deg, rgba(22,51,70,1) 0%, rgba(19,36,64,1) 100%);
+background: linear-gradient(0deg, rgba(22,51,70,1) 0%, rgba(19,36,64,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#163346",endColorstr="#132440",GradientType=1);background-repeat:no-repeat;background-size:cover;background-position:center;}
+#nav a,#nav a:visited{display:inline-block;padding:.6em 1.5em .6em;text-decoration:none;text-align:center;color:#f1f1f1;font-size: calc(13px + 3 * ((100vw - 320px) / 680)); font-weight: 100;text-transform:uppercase;text-shadow:0 1px 0 #000;opacity:.5;}
+#nav a:hover{color:#fff;text-decoration:none;background-color:rgba(0,0,0,0.2);opacity:1;}
+#continut{display:block;width:100%;height:auto;margin:1em auto 2em auto;float:none;clear:left;}
+.item{display:block;width:80%;height:auto;margin:1em auto 2em auto;float:none;clear:left;background-color:rgba(0,0,0,0.5);border-radius:5px;}
+.thumbnail_preview{display:block;width:40%;height:auto;margin:0 auto;float:left;box-sizing:border-box;}
+.itemavailable{display:block;width:60%;height:auto;margin:0 auto;float:left;box-sizing:border-box;}
+.clearfix{display:block;width:100%;height:0px;float:none;clear:left;margin:0 auto;}
+
+.thumbnail_preview{text-align:center;}
+.thumbnail_preview img{display:block;width:100%;height:auto;margin:0 auto;}
+
+
+.itemavailable{text-align:center;}
+.info{display:block;width:90%;height:auto;margin:0 auto;padding:.5em;text-align:left;float:none;clear:left;}
+.info h1{display:block;width:90%;height:auto;font-size: calc(15px + 6 * ((100vw - 320px) / 680)); font-weight: 400;color:#0CC;text-transform:uppercase;border-bottom:1px solid #111;}
+.info p{display:block;width:100%;height:auto;margin:0 auto;font-size: calc(13px + 4 * ((100vw - 320px) / 680)); font-weight: 100;color:#09C;}
+.info a, .info a:visited{color:#ccc;text-decoration:none;font-size: calc(13px + 4 * ((100vw - 320px) / 680)); font-weight: 100;}
+.info a:hover{color:#fff;text-decoration:none;}
+.content{margin-bottom:40px;}
+.content strong{font-weight:400;}
+.dnld{display:block;width:90%;height:auto;margin:40px auto 12px auto;text-align:center;}
+.dnld a,.dnld a:visited{padding:.3em 2em .3em;text-align:center;background-color:#069;font-size: calc(13px + 4 * ((100vw - 320px) / 680)); font-weight: 100;}
+.dnld a:hover{background-color:#F39;}
+
+
+/*** SVGs ***/
+.svg-icon-award {width: 1.3em;height: 1.3em;transform:translate(0, 5px);margin-right:7px;}
+.svg-icon-award path,
+.svg-icon-award polygon,
+.svg-icon-award rect {fill: #000000;}
+.svg-icon-award circle {stroke: #000000;stroke-width: 1;}
+
+
+.svg-icon-file {width: 1.3em;height: 1.3em;transform:translate(0, 5px);margin-right:7px;}
+.svg-icon-file path,
+.svg-icon-file polygon,
+.svg-icon-file rect {fill: #4691f6;}
+.svg-icon-file circle {stroke: #4691f6;stroke-width: 1;}
+
+.svg-icon-ttle {width: 1em;height: 1em;margin-right:6px;}
+.svg-icon-ttle path,
+.svg-icon-ttle polygon,
+.svg-icon-ttle rect {fill: #09C;}
+.svg-icon-ttle circle {stroke: #09C;stroke-width: 1;}
+
+.svg-icon-download {width: 1em;height: 1em;margin-right:7px;transition:all .3s;}
+.svg-icon-download path,
+.svg-icon-download polygon,
+.svg-icon-download rect {fill: #f1f1f1;}
+.svg-icon-download circle {stroke: #f1f1f1;stroke-width: 1;}
+.dnld a:hover .svg-icon-download {width: 1em;height: 1em;margin-right:7px;transform:translateY(4px);}
+
+.svg-icon-top {width: 1em;height: 1em; opacity:.5;}
+.svg-icon-top path,
+.svg-icon-top polygon,
+.svg-icon-top rect {fill: #fff;}
+.svg-icon-top circle {stroke: #fff;stroke-width: 1;}
+.totop a:hover .svg-icon-top {width: 1em;height: 1em; opacity:1;}
+
+
+.svg-icon-twt {width: 1em;height: 1em;opacity:.5;}
+.svg-icon-twt path,
+.svg-icon-twt polygon,
+.svg-icon-twt rect {fill: #ffffff;}
+.svg-icon-twt circle {stroke: #ffffff;stroke-width: 1;}
+
+
+/** Pagination **/
+.totop{display:block;width:80%;height:auto;margin:20px auto 0px auto;text-align:center;padding:.5em;}
+.pagination{display:block;width:80%;height:auto;margin:10px auto 33px auto;text-align:center;padding:1em;border-top:1px dashed #000;}
+.pagination a,.pagination a:visited{display:inline-block;padding:.5em 1em .5em;text-align:center;font-size: calc(11px + 4 * ((100vw - 320px) / 680)); font-weight: 100;color:#f1f1f1;border-bottom:1px solid rgba(255,255,255,0.0);text-decoration:none;margin:2px auto;transition:all .3s;}
+.pagination a:hover{color:#fff;border-bottom:1px solid rgba(255,255,255,0.40);background-color:rgba(0,0,0,0.4);}
+
+
+
+/** Footer **/
+#footer{display:block;width:100%;height:auto;margin:20px auto 0 auto;float:none;clear:left;text-align:center;box-sizing:border-box;background: rgb(22,51,70);
+background: -moz-linear-gradient(0deg, rgba(22,51,70,1) 0%, rgba(19,36,64,1) 100%);
+background: -webkit-linear-gradient(0deg, rgba(22,51,70,1) 0%, rgba(19,36,64,1) 100%);
+background: linear-gradient(0deg, rgba(22,51,70,1) 0%, rgba(19,36,64,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#163346",endColorstr="#132440",GradientType=1);background-repeat:no-repeat;background-size:cover;background-position:center;padding:1em 0em .6em;}
+.hero{display:block;width:50%;height:auto;margin:0 auto;float:left;text-align:left;}
+.hero h2{display:block;width:90%;height:auto;margin:0 auto 6px auto;padding:.3em;font-size: calc(14px + 5 * ((100vw - 320px) / 680)); font-weight: 400;color:rgba(255,255,255,.6);}
+.hero p{display:block;width:90%;height:auto;margin:0 auto;padding:.3em;font-size: calc(11px + 5 * ((100vw - 320px) / 680)); font-weight: 100;color:rgba(255,255,255,.8);}
+.hero a, .hero a:visited{text-decoration:none;color:#fff;}
+.hero a:hover{text-decoration:underline;color:#fff;}
+.tright{text-align:right;}
+.tcenter{text-align:center;}
+#footer svg#camgirlcloud_logo{display:block;width:20%;height:auto;margin:0 auto;opacity:.3;}
+#footer .brand a:hover svg{opacity:.7;}
+.icons{display:block;text-align:center;margin:0 auto;}.icons a,.icons a:visited{display:inline-block;opacity:0.5;}
+.icons a:hover{opacity:1;filter: drop-shadow(0 0px 0.65rem #fff)}
+.igni svg{animation: Rotate .5s infinite;transform:rotate(0deg);transform-origin:top center 10px;}
+@keyframes Rotate {
+	from {transform:rotate(-15deg);}
+	50% {transform:rotate(15deg);filter: drop-shadow(0 5px 0.65rem #FFF);}
+	to {transform:rotate(-15deg);}
+}
+a.active, a.active:visited,a.active:hover{filter:grayscale(120%);background-color:transparent;border:none;color:#666;}
+.autor{display:block;width:80%;height:auto;padding:1.5em;margin:2em auto 2em auto;background-color:#222;font-weight:100;font-size: calc(13px + 4 * ((100vw - 320px) / 680));}
+</style>
+</head>
+
+<body>
+
+
+  
+  <div class="autor">
+  <p><strong>One reason to put it outhere...</strong></p>
+    <p>I have multiple reasons but here are a few...<br>Don't you hate it when you lose saved projects after reinstalling an OS ?</p>
+    <p>Well, it happened to me twice on my life-time, when CD's were "the next best thing" for storage digital resources or any data for that matter</p>
+    <p><strong>Sharing is nice</strong>. In my line of work I do have to deal with "hey dude... do you have this thing editable...?"</p>
+    <p><strong>Review &amp; Inspiration</strong>. Sometimes is good to go back to an older project and review it, make it better or apply a new style to it.<br>"Lol, I don't have this photoshop style anymore... I can take it from this work..."</p>
+    <p>So yes, having a "backup" its not a bad idea</p>
+  </div>
+
+<div class="pagination">
+   <a href="index.html">Home</a>
+ </div>
+
+</body>
+</html>

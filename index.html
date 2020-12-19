@@ -1,0 +1,370 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>CGC Graphic Resources</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+* {box-sizing:border-box;}
+body{background-color:#233C56;color:#FFF;font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;font-size: calc(15px + 6 * ((100vw - 320px) / 680));padding:0;margin:0 auto;}
+html{scroll-behavior: smooth;}
+
+
+.image-container {display:block;width:100%;height:auto;margin:0 auto;padding:4em 0em 4em;background-image: url(bkup/assets/camgirl_cloud_header.jpg);background-size: cover;background-repeat:no-repeat;background-position:center; background-attachment:fixed;text-align:center;}
+.header{display:block;width:70%;height:auto;margin:0 auto;text-align:center;}
+.text {display:block;background-color: rgba(255,255,255,0.50);color: black;font-size: calc(15px + 6 * ((100vw - 320px) / 680)); font-weight: 700;margin: 0 auto;padding:.3em 1em .3em;width: 80%;height:auto;text-align: center;top: 50%;left: 50%;mix-blend-mode: screen;text-shadow:0 1px 1px #000;}
+#nav{display:block;width:100%;height:auto;margin:0 auto;float:none;clear:left;text-align:center;box-sizing:border-box;background: rgb(22,51,70);
+background: -moz-linear-gradient(0deg, rgba(22,51,70,1) 0%, rgba(19,36,64,1) 100%);
+background: -webkit-linear-gradient(0deg, rgba(22,51,70,1) 0%, rgba(19,36,64,1) 100%);
+background: linear-gradient(0deg, rgba(22,51,70,1) 0%, rgba(19,36,64,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#163346",endColorstr="#132440",GradientType=1);background-repeat:no-repeat;background-size:cover;background-position:center;}
+#nav a,#nav a:visited{display:inline-block;padding:.6em 1.5em .6em;text-decoration:none;text-align:center;color:#f1f1f1;font-size: calc(13px + 3 * ((100vw - 320px) / 680)); font-weight: 100;text-transform:uppercase;text-shadow:0 1px 0 #000;opacity:.5;}
+#nav a:hover{color:#fff;text-decoration:none;background-color:rgba(0,0,0,0.2);opacity:1;}
+#continut{display:block;width:100%;height:auto;margin:1em auto 2em auto;float:none;clear:left;}
+.item{display:block;width:80%;height:auto;margin:1em auto 2em auto;float:none;clear:left;background-color:rgba(0,0,0,0.5);border-radius:5px;}
+.thumbnail_preview{display:block;width:40%;height:auto;margin:0 auto;float:left;box-sizing:border-box;}
+.itemavailable{display:block;width:60%;height:auto;margin:0 auto;float:left;box-sizing:border-box;}
+.clearfix{display:block;width:100%;height:0px;float:none;clear:left;margin:0 auto;}
+
+.thumbnail_preview{text-align:center;}
+.thumbnail_preview img{display:block;width:100%;height:auto;margin:0 auto;}
+
+
+.itemavailable{text-align:center;}
+.info{display:block;width:90%;height:auto;margin:0 auto;padding:.5em;text-align:left;float:none;clear:left;}
+.info h1{display:block;width:90%;height:auto;font-size: calc(15px + 6 * ((100vw - 320px) / 680)); font-weight: 400;color:#0CC;text-transform:uppercase;border-bottom:1px solid #111;}
+.info p{display:block;width:100%;height:auto;margin:0 auto;font-size: calc(13px + 4 * ((100vw - 320px) / 680)); font-weight: 100;color:#09C;}
+.info a, .info a:visited{color:#ccc;text-decoration:none;font-size: calc(13px + 4 * ((100vw - 320px) / 680)); font-weight: 100;}
+.info a:hover{color:#fff;text-decoration:none;}
+.content{margin-bottom:40px;}
+.content strong{font-weight:400;}
+.dnld{display:block;width:90%;height:auto;margin:40px auto 12px auto;text-align:center;}
+.dnld a,.dnld a:visited{padding:.3em 2em .3em;text-align:center;background-color:#069;font-size: calc(13px + 4 * ((100vw - 320px) / 680)); font-weight: 100;}
+.dnld a:hover{background-color:#F39;}
+
+
+/*** SVGs ***/
+.svg-icon-award {width: 1.3em;height: 1.3em;transform:translate(0, 5px);margin-right:7px;}
+.svg-icon-award path,
+.svg-icon-award polygon,
+.svg-icon-award rect {fill: #000000;}
+.svg-icon-award circle {stroke: #000000;stroke-width: 1;}
+
+
+.svg-icon-file {width: 1.3em;height: 1.3em;transform:translate(0, 5px);margin-right:7px;}
+.svg-icon-file path,
+.svg-icon-file polygon,
+.svg-icon-file rect {fill: #4691f6;}
+.svg-icon-file circle {stroke: #4691f6;stroke-width: 1;}
+
+.svg-icon-ttle {width: 1em;height: 1em;margin-right:6px;}
+.svg-icon-ttle path,
+.svg-icon-ttle polygon,
+.svg-icon-ttle rect {fill: #09C;}
+.svg-icon-ttle circle {stroke: #09C;stroke-width: 1;}
+
+.svg-icon-download {width: 1em;height: 1em;margin-right:7px;transition:all .3s;}
+.svg-icon-download path,
+.svg-icon-download polygon,
+.svg-icon-download rect {fill: #f1f1f1;}
+.svg-icon-download circle {stroke: #f1f1f1;stroke-width: 1;}
+.dnld a:hover .svg-icon-download {width: 1em;height: 1em;margin-right:7px;transform:translateY(4px);}
+
+.svg-icon-top {width: 1em;height: 1em; opacity:.5;}
+.svg-icon-top path,
+.svg-icon-top polygon,
+.svg-icon-top rect {fill: #fff;}
+.svg-icon-top circle {stroke: #fff;stroke-width: 1;}
+.totop a:hover .svg-icon-top {width: 1em;height: 1em; opacity:1;}
+
+
+.svg-icon-twt {width: 1em;height: 1em;opacity:.5;}
+.svg-icon-twt path,
+.svg-icon-twt polygon,
+.svg-icon-twt rect {fill: #ffffff;}
+.svg-icon-twt circle {stroke: #ffffff;stroke-width: 1;}
+
+
+/** Pagination **/
+.totop{display:block;width:80%;height:auto;margin:20px auto 0px auto;text-align:center;padding:.5em;}
+.pagination{display:block;width:80%;height:auto;margin:10px auto 33px auto;text-align:center;padding:1em;border-top:1px dashed #000;}
+.pagination a,.pagination a:visited{display:inline-block;padding:.5em 1em .5em;text-align:center;font-size: calc(11px + 4 * ((100vw - 320px) / 680)); font-weight: 100;color:#f1f1f1;border-bottom:1px solid rgba(255,255,255,0.0);text-decoration:none;margin:2px auto;transition:all .3s;}
+.pagination a:hover{color:#fff;border-bottom:1px solid rgba(255,255,255,0.40);background-color:rgba(0,0,0,0.4);}
+
+
+
+/** Footer **/
+#footer{display:block;width:100%;height:auto;margin:20px auto 0 auto;float:none;clear:left;text-align:center;box-sizing:border-box;background: rgb(22,51,70);
+background: -moz-linear-gradient(0deg, rgba(22,51,70,1) 0%, rgba(19,36,64,1) 100%);
+background: -webkit-linear-gradient(0deg, rgba(22,51,70,1) 0%, rgba(19,36,64,1) 100%);
+background: linear-gradient(0deg, rgba(22,51,70,1) 0%, rgba(19,36,64,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#163346",endColorstr="#132440",GradientType=1);background-repeat:no-repeat;background-size:cover;background-position:center;padding:1em 0em .6em;}
+.hero{display:block;width:50%;height:auto;margin:0 auto;float:left;text-align:left;}
+.hero h2{display:block;width:90%;height:auto;margin:0 auto 6px auto;padding:.3em;font-size: calc(14px + 5 * ((100vw - 320px) / 680)); font-weight: 400;color:rgba(255,255,255,.6);}
+.hero p{display:block;width:90%;height:auto;margin:0 auto;padding:.3em;font-size: calc(11px + 5 * ((100vw - 320px) / 680)); font-weight: 100;color:rgba(255,255,255,.8);}
+.hero a, .hero a:visited{text-decoration:none;color:#fff;}
+.hero a:hover{text-decoration:underline;color:#fff;}
+.tright{text-align:right;}
+.tcenter{text-align:center;}
+#footer svg#camgirlcloud_logo{display:block;width:20%;height:auto;margin:0 auto;opacity:.3;}
+#footer .brand a:hover svg{opacity:.7;}
+.icons{display:block;text-align:center;margin:0 auto;}.icons a,.icons a:visited{display:inline-block;opacity:0.5;}
+.icons a:hover{opacity:1;filter: drop-shadow(0 0px 0.65rem #fff)}
+.igni svg{animation: Rotate .5s infinite;transform:rotate(0deg);transform-origin:top center 10px;}
+a.active, a.active:visited,a.active:hover{filter:grayscale(120%);background-color:transparent;border:none;color:#666;}
+@keyframes Rotate {
+	from {transform:rotate(-15deg);}
+	50% {transform:rotate(15deg);filter: drop-shadow(0 5px 0.65rem #FFF);}
+	to {transform:rotate(-15deg);}
+}
+</style>
+</head>
+
+<body>
+
+<div class="image-container">
+   <div class="header">
+      <div class="text"><svg class="svg-icon-award" viewBox="0 0 20 20">
+							<path d="M15.94,10.179l-2.437-0.325l1.62-7.379c0.047-0.235-0.132-0.458-0.372-0.458H5.25c-0.241,0-0.42,0.223-0.373,0.458l1.634,7.376L4.06,10.179c-0.312,0.041-0.446,0.425-0.214,0.649l2.864,2.759l-0.724,3.947c-0.058,0.315,0.277,0.554,0.559,0.401l3.457-1.916l3.456,1.916c-0.419-0.238,0.56,0.439,0.56-0.401l-0.725-3.947l2.863-2.759C16.388,10.604,16.254,10.22,15.94,10.179M10.381,2.778h3.902l-1.536,6.977L12.036,9.66l-1.655-3.546V2.778z M5.717,2.778h3.903v3.335L7.965,9.66L7.268,9.753L5.717,2.778zM12.618,13.182c-0.092,0.088-0.134,0.217-0.11,0.343l0.615,3.356l-2.938-1.629c-0.057-0.03-0.122-0.048-0.184-0.048c-0.063,0-0.128,0.018-0.185,0.048l-2.938,1.629l0.616-3.356c0.022-0.126-0.019-0.255-0.11-0.343l-2.441-2.354l3.329-0.441c0.128-0.017,0.24-0.099,0.295-0.215l1.435-3.073l1.435,3.073c0.055,0.116,0.167,0.198,0.294,0.215l3.329,0.441L12.618,13.182z"></path>
+						</svg> GRAPHICS CGC</div>
+      </div>
+</div>
+
+
+<div id="nav">
+<a href="https://github.com/cgc-dan/cgc" target="_blank">Repo</a>
+<a href="https://github.com/cgc-dan/cgc/discussions" target="_blank">Get Involved</a>
+<a href="note.html" target="_blank">Author Note</a>
+</div>
+
+
+<div id="continut">
+
+<div class="item">
+  <div class="thumbnail_preview">
+  <img src="bkup/assets/badge_01.jpg" alt="Badge 01"/>
+  </div>
+  <div class="itemavailable">
+     <div class="info">
+        <h1><svg class="svg-icon-ttle" viewBox="0 0 20 20">
+							<path d="M14.467,1.771H5.533c-0.258,0-0.47,0.211-0.47,0.47v15.516c0,0.414,0.504,0.634,0.802,0.331L10,13.955l4.136,4.133c0.241,0.241,0.802,0.169,0.802-0.331V2.241C14.938,1.982,14.726,1.771,14.467,1.771 M13.997,16.621l-3.665-3.662c-0.186-0.186-0.479-0.186-0.664,0l-3.666,3.662V2.711h7.994V16.621z"></path>
+						</svg>Graphic 01</h1>
+        <div class="content"><p>Used on Chaturbate bio design  <a href="https://camgirl.cloud/template/anastasia-chaturbate-bio-design/" target="_blank">Anastasia</a> as graphic elements in Raffle section</p>
+        <p><svg class="svg-icon-file" viewBox="0 0 20 20">
+							<path d="M17.927,5.828h-4.41l-1.929-1.961c-0.078-0.079-0.186-0.125-0.297-0.125H4.159c-0.229,0-0.417,0.188-0.417,0.417v1.669H2.073c-0.229,0-0.417,0.188-0.417,0.417v9.596c0,0.229,0.188,0.417,0.417,0.417h15.854c0.229,0,0.417-0.188,0.417-0.417V6.245C18.344,6.016,18.156,5.828,17.927,5.828 M4.577,4.577h6.539l1.231,1.251h-7.77V4.577z M17.51,15.424H2.491V6.663H17.51V15.424z"></path>
+						</svg><strong>File type:</strong> .tif layered file compatible with Photoshop</p>
+        </div>
+        <div class="dnld"><a href="bkup/dn/badge_01.tif"><svg class="svg-icon-download" viewBox="0 0 20 20">
+							<path fill="none" d="M15.608,6.262h-2.338v0.935h2.338c0.516,0,0.934,0.418,0.934,0.935v8.879c0,0.517-0.418,0.935-0.934,0.935H4.392c-0.516,0-0.935-0.418-0.935-0.935V8.131c0-0.516,0.419-0.935,0.935-0.935h2.336V6.262H4.392c-1.032,0-1.869,0.837-1.869,1.869v8.879c0,1.031,0.837,1.869,1.869,1.869h11.216c1.031,0,1.869-0.838,1.869-1.869V8.131C17.478,7.099,16.64,6.262,15.608,6.262z M9.513,11.973c0.017,0.082,0.047,0.162,0.109,0.226c0.104,0.106,0.243,0.143,0.378,0.126c0.135,0.017,0.274-0.02,0.377-0.126c0.064-0.065,0.097-0.147,0.115-0.231l1.708-1.751c0.178-0.183,0.178-0.479,0-0.662c-0.178-0.182-0.467-0.182-0.645,0l-1.101,1.129V1.588c0-0.258-0.204-0.467-0.456-0.467c-0.252,0-0.456,0.209-0.456,0.467v9.094L8.443,9.553c-0.178-0.182-0.467-0.182-0.645,0c-0.178,0.184-0.178,0.479,0,0.662L9.513,11.973z"></path>
+						</svg> Download</a></div>
+     </div>
+  </div>
+ <div class="clearfix"></div>
+ </div>
+ 
+ 
+ 
+ <div class="item">
+  <div class="thumbnail_preview">
+  <img src="bkup/assets/badge_02.jpg" alt="Badge 02"/>
+  </div>
+  <div class="itemavailable">
+     <div class="info">
+        <h1><svg class="svg-icon-ttle" viewBox="0 0 20 20">
+							<path d="M14.467,1.771H5.533c-0.258,0-0.47,0.211-0.47,0.47v15.516c0,0.414,0.504,0.634,0.802,0.331L10,13.955l4.136,4.133c0.241,0.241,0.802,0.169,0.802-0.331V2.241C14.938,1.982,14.726,1.771,14.467,1.771 M13.997,16.621l-3.665-3.662c-0.186-0.186-0.479-0.186-0.664,0l-3.666,3.662V2.711h7.994V16.621z"></path>
+						</svg>Graphic 02</h1>
+        <div class="content"><p>Used in some of CGC designs</p>
+        <p><svg class="svg-icon-file" viewBox="0 0 20 20">
+							<path d="M17.927,5.828h-4.41l-1.929-1.961c-0.078-0.079-0.186-0.125-0.297-0.125H4.159c-0.229,0-0.417,0.188-0.417,0.417v1.669H2.073c-0.229,0-0.417,0.188-0.417,0.417v9.596c0,0.229,0.188,0.417,0.417,0.417h15.854c0.229,0,0.417-0.188,0.417-0.417V6.245C18.344,6.016,18.156,5.828,17.927,5.828 M4.577,4.577h6.539l1.231,1.251h-7.77V4.577z M17.51,15.424H2.491V6.663H17.51V15.424z"></path>
+						</svg><strong>File type:</strong> .tif layered file compatible with Photoshop</p>
+        </div>
+        <div class="dnld"><a href="bkup/dn/badge_02.tif"><svg class="svg-icon-download" viewBox="0 0 20 20">
+							<path fill="none" d="M15.608,6.262h-2.338v0.935h2.338c0.516,0,0.934,0.418,0.934,0.935v8.879c0,0.517-0.418,0.935-0.934,0.935H4.392c-0.516,0-0.935-0.418-0.935-0.935V8.131c0-0.516,0.419-0.935,0.935-0.935h2.336V6.262H4.392c-1.032,0-1.869,0.837-1.869,1.869v8.879c0,1.031,0.837,1.869,1.869,1.869h11.216c1.031,0,1.869-0.838,1.869-1.869V8.131C17.478,7.099,16.64,6.262,15.608,6.262z M9.513,11.973c0.017,0.082,0.047,0.162,0.109,0.226c0.104,0.106,0.243,0.143,0.378,0.126c0.135,0.017,0.274-0.02,0.377-0.126c0.064-0.065,0.097-0.147,0.115-0.231l1.708-1.751c0.178-0.183,0.178-0.479,0-0.662c-0.178-0.182-0.467-0.182-0.645,0l-1.101,1.129V1.588c0-0.258-0.204-0.467-0.456-0.467c-0.252,0-0.456,0.209-0.456,0.467v9.094L8.443,9.553c-0.178-0.182-0.467-0.182-0.645,0c-0.178,0.184-0.178,0.479,0,0.662L9.513,11.973z"></path>
+						</svg> Download</a></div>
+     </div>
+  </div>
+ <div class="clearfix"></div>
+ </div>
+ 
+ 
+ 
+ <div class="item">
+  <div class="thumbnail_preview">
+  <img src="bkup/assets/badge_03.jpg" alt="Badge 03"/>
+  </div>
+  <div class="itemavailable">
+     <div class="info">
+        <h1><svg class="svg-icon-ttle" viewBox="0 0 20 20">
+							<path d="M14.467,1.771H5.533c-0.258,0-0.47,0.211-0.47,0.47v15.516c0,0.414,0.504,0.634,0.802,0.331L10,13.955l4.136,4.133c0.241,0.241,0.802,0.169,0.802-0.331V2.241C14.938,1.982,14.726,1.771,14.467,1.771 M13.997,16.621l-3.665-3.662c-0.186-0.186-0.479-0.186-0.664,0l-3.666,3.662V2.711h7.994V16.621z"></path>
+						</svg>Graphics 03</h1>
+        <div class="content"><p>Used in <a href="https://camgirl.cloud/template/axel-chaturbate-bio-design/" target="_blank">Axel custom Chaturbate bio design</a> as graphic elements in Top Tippers section</p>
+        <p><svg class="svg-icon-file" viewBox="0 0 20 20">
+							<path d="M17.927,5.828h-4.41l-1.929-1.961c-0.078-0.079-0.186-0.125-0.297-0.125H4.159c-0.229,0-0.417,0.188-0.417,0.417v1.669H2.073c-0.229,0-0.417,0.188-0.417,0.417v9.596c0,0.229,0.188,0.417,0.417,0.417h15.854c0.229,0,0.417-0.188,0.417-0.417V6.245C18.344,6.016,18.156,5.828,17.927,5.828 M4.577,4.577h6.539l1.231,1.251h-7.77V4.577z M17.51,15.424H2.491V6.663H17.51V15.424z"></path>
+						</svg><strong>File type:</strong> .tif layered file compatible with Photoshop</p>
+        </div>
+        <div class="dnld"><a href="bkup/dn/badge_03.tif"><svg class="svg-icon-download" viewBox="0 0 20 20">
+							<path fill="none" d="M15.608,6.262h-2.338v0.935h2.338c0.516,0,0.934,0.418,0.934,0.935v8.879c0,0.517-0.418,0.935-0.934,0.935H4.392c-0.516,0-0.935-0.418-0.935-0.935V8.131c0-0.516,0.419-0.935,0.935-0.935h2.336V6.262H4.392c-1.032,0-1.869,0.837-1.869,1.869v8.879c0,1.031,0.837,1.869,1.869,1.869h11.216c1.031,0,1.869-0.838,1.869-1.869V8.131C17.478,7.099,16.64,6.262,15.608,6.262z M9.513,11.973c0.017,0.082,0.047,0.162,0.109,0.226c0.104,0.106,0.243,0.143,0.378,0.126c0.135,0.017,0.274-0.02,0.377-0.126c0.064-0.065,0.097-0.147,0.115-0.231l1.708-1.751c0.178-0.183,0.178-0.479,0-0.662c-0.178-0.182-0.467-0.182-0.645,0l-1.101,1.129V1.588c0-0.258-0.204-0.467-0.456-0.467c-0.252,0-0.456,0.209-0.456,0.467v9.094L8.443,9.553c-0.178-0.182-0.467-0.182-0.645,0c-0.178,0.184-0.178,0.479,0,0.662L9.513,11.973z"></path>
+						</svg> Download</a></div>
+     </div>
+  </div>
+ <div class="clearfix"></div>
+ </div>
+ 
+
+
+
+
+
+<div class="item">
+  <div class="thumbnail_preview">
+  <img src="bkup/assets/icons_01.jpg" alt="Icons 01"/>
+  </div>
+  <div class="itemavailable">
+     <div class="info">
+        <h1><svg class="svg-icon-ttle" viewBox="0 0 20 20">
+							<path d="M14.467,1.771H5.533c-0.258,0-0.47,0.211-0.47,0.47v15.516c0,0.414,0.504,0.634,0.802,0.331L10,13.955l4.136,4.133c0.241,0.241,0.802,0.169,0.802-0.331V2.241C14.938,1.982,14.726,1.771,14.467,1.771 M13.997,16.621l-3.665-3.662c-0.186-0.186-0.479-0.186-0.664,0l-3.666,3.662V2.711h7.994V16.621z"></path>
+						</svg>Graphics 04</h1>
+        <div class="content"><p>Twitter, Instagram, Verified icons, used in various of CGC designs</p>
+        <p><svg class="svg-icon-file" viewBox="0 0 20 20">
+							<path d="M17.927,5.828h-4.41l-1.929-1.961c-0.078-0.079-0.186-0.125-0.297-0.125H4.159c-0.229,0-0.417,0.188-0.417,0.417v1.669H2.073c-0.229,0-0.417,0.188-0.417,0.417v9.596c0,0.229,0.188,0.417,0.417,0.417h15.854c0.229,0,0.417-0.188,0.417-0.417V6.245C18.344,6.016,18.156,5.828,17.927,5.828 M4.577,4.577h6.539l1.231,1.251h-7.77V4.577z M17.51,15.424H2.491V6.663H17.51V15.424z"></path>
+						</svg><strong>File type:</strong> .tif layered file compatible with Photoshop</p>
+        </div>
+        <div class="dnld"><a href="bkup/dn/icons_01.tif"><svg class="svg-icon-download" viewBox="0 0 20 20">
+							<path fill="none" d="M15.608,6.262h-2.338v0.935h2.338c0.516,0,0.934,0.418,0.934,0.935v8.879c0,0.517-0.418,0.935-0.934,0.935H4.392c-0.516,0-0.935-0.418-0.935-0.935V8.131c0-0.516,0.419-0.935,0.935-0.935h2.336V6.262H4.392c-1.032,0-1.869,0.837-1.869,1.869v8.879c0,1.031,0.837,1.869,1.869,1.869h11.216c1.031,0,1.869-0.838,1.869-1.869V8.131C17.478,7.099,16.64,6.262,15.608,6.262z M9.513,11.973c0.017,0.082,0.047,0.162,0.109,0.226c0.104,0.106,0.243,0.143,0.378,0.126c0.135,0.017,0.274-0.02,0.377-0.126c0.064-0.065,0.097-0.147,0.115-0.231l1.708-1.751c0.178-0.183,0.178-0.479,0-0.662c-0.178-0.182-0.467-0.182-0.645,0l-1.101,1.129V1.588c0-0.258-0.204-0.467-0.456-0.467c-0.252,0-0.456,0.209-0.456,0.467v9.094L8.443,9.553c-0.178-0.182-0.467-0.182-0.645,0c-0.178,0.184-0.178,0.479,0,0.662L9.513,11.973z"></path>
+						</svg> Download</a></div>
+     </div>
+  </div>
+ <div class="clearfix"></div>
+ </div>
+
+
+<div class="item">
+  <div class="thumbnail_preview">
+  <img src="bkup/assets/comp_01_jessy.jpg" alt="Comp Design 01"/>
+  </div>
+  <div class="itemavailable">
+     <div class="info">
+        <h1><svg class="svg-icon-ttle" viewBox="0 0 20 20">
+							<path d="M14.467,1.771H5.533c-0.258,0-0.47,0.211-0.47,0.47v15.516c0,0.414,0.504,0.634,0.802,0.331L10,13.955l4.136,4.133c0.241,0.241,0.802,0.169,0.802-0.331V2.241C14.938,1.982,14.726,1.771,14.467,1.771 M13.997,16.621l-3.665-3.662c-0.186-0.186-0.479-0.186-0.664,0l-3.666,3.662V2.711h7.994V16.621z"></path>
+						</svg>Graphics 05</h1>
+        <div class="content"><p>Design. Used in Jessy custom Niteflirt bio available for live editing on CGC</p>
+        <p><svg class="svg-icon-file" viewBox="0 0 20 20">
+							<path d="M17.927,5.828h-4.41l-1.929-1.961c-0.078-0.079-0.186-0.125-0.297-0.125H4.159c-0.229,0-0.417,0.188-0.417,0.417v1.669H2.073c-0.229,0-0.417,0.188-0.417,0.417v9.596c0,0.229,0.188,0.417,0.417,0.417h15.854c0.229,0,0.417-0.188,0.417-0.417V6.245C18.344,6.016,18.156,5.828,17.927,5.828 M4.577,4.577h6.539l1.231,1.251h-7.77V4.577z M17.51,15.424H2.491V6.663H17.51V15.424z"></path>
+						</svg><strong>File type:</strong> 1000x1125 w/h .tif layered file compatible with Photoshop</p>
+        </div>
+        <div class="dnld"><a href="bkup/dn/comp_01.tif"><svg class="svg-icon-download" viewBox="0 0 20 20">
+							<path fill="none" d="M15.608,6.262h-2.338v0.935h2.338c0.516,0,0.934,0.418,0.934,0.935v8.879c0,0.517-0.418,0.935-0.934,0.935H4.392c-0.516,0-0.935-0.418-0.935-0.935V8.131c0-0.516,0.419-0.935,0.935-0.935h2.336V6.262H4.392c-1.032,0-1.869,0.837-1.869,1.869v8.879c0,1.031,0.837,1.869,1.869,1.869h11.216c1.031,0,1.869-0.838,1.869-1.869V8.131C17.478,7.099,16.64,6.262,15.608,6.262z M9.513,11.973c0.017,0.082,0.047,0.162,0.109,0.226c0.104,0.106,0.243,0.143,0.378,0.126c0.135,0.017,0.274-0.02,0.377-0.126c0.064-0.065,0.097-0.147,0.115-0.231l1.708-1.751c0.178-0.183,0.178-0.479,0-0.662c-0.178-0.182-0.467-0.182-0.645,0l-1.101,1.129V1.588c0-0.258-0.204-0.467-0.456-0.467c-0.252,0-0.456,0.209-0.456,0.467v9.094L8.443,9.553c-0.178-0.182-0.467-0.182-0.645,0c-0.178,0.184-0.178,0.479,0,0.662L9.513,11.973z"></path>
+						</svg> Download</a></div>
+     </div>
+  </div>
+ <div class="clearfix"></div>
+ </div>
+
+ 
+ 
+ 
+ 
+ 
+ <div class="item">
+  <div class="thumbnail_preview">
+  <img src="bkup/assets/nf_vegas.jpg" alt="Header design NiteFlirt Vegas"/>
+  </div>
+  <div class="itemavailable">
+     <div class="info">
+        <h1><svg class="svg-icon-ttle" viewBox="0 0 20 20">
+							<path d="M14.467,1.771H5.533c-0.258,0-0.47,0.211-0.47,0.47v15.516c0,0.414,0.504,0.634,0.802,0.331L10,13.955l4.136,4.133c0.241,0.241,0.802,0.169,0.802-0.331V2.241C14.938,1.982,14.726,1.771,14.467,1.771 M13.997,16.621l-3.665-3.662c-0.186-0.186-0.479-0.186-0.664,0l-3.666,3.662V2.711h7.994V16.621z"></path>
+						</svg>Graphics 06</h1>
+        <div class="content"><p>Header design. Used in Vegas custom Niteflirt bio available for live editing on CGC (and other projects)</p>
+        <p><svg class="svg-icon-file" viewBox="0 0 20 20">
+							<path d="M17.927,5.828h-4.41l-1.929-1.961c-0.078-0.079-0.186-0.125-0.297-0.125H4.159c-0.229,0-0.417,0.188-0.417,0.417v1.669H2.073c-0.229,0-0.417,0.188-0.417,0.417v9.596c0,0.229,0.188,0.417,0.417,0.417h15.854c0.229,0,0.417-0.188,0.417-0.417V6.245C18.344,6.016,18.156,5.828,17.927,5.828 M4.577,4.577h6.539l1.231,1.251h-7.77V4.577z M17.51,15.424H2.491V6.663H17.51V15.424z"></path>
+						</svg><strong>File type:</strong> .tif layered file compatible with Photoshop</p>
+        </div>
+        <div class="dnld"><a href="bkup/dn/nf_vegas.tif"><svg class="svg-icon-download" viewBox="0 0 20 20">
+							<path fill="none" d="M15.608,6.262h-2.338v0.935h2.338c0.516,0,0.934,0.418,0.934,0.935v8.879c0,0.517-0.418,0.935-0.934,0.935H4.392c-0.516,0-0.935-0.418-0.935-0.935V8.131c0-0.516,0.419-0.935,0.935-0.935h2.336V6.262H4.392c-1.032,0-1.869,0.837-1.869,1.869v8.879c0,1.031,0.837,1.869,1.869,1.869h11.216c1.031,0,1.869-0.838,1.869-1.869V8.131C17.478,7.099,16.64,6.262,15.608,6.262z M9.513,11.973c0.017,0.082,0.047,0.162,0.109,0.226c0.104,0.106,0.243,0.143,0.378,0.126c0.135,0.017,0.274-0.02,0.377-0.126c0.064-0.065,0.097-0.147,0.115-0.231l1.708-1.751c0.178-0.183,0.178-0.479,0-0.662c-0.178-0.182-0.467-0.182-0.645,0l-1.101,1.129V1.588c0-0.258-0.204-0.467-0.456-0.467c-0.252,0-0.456,0.209-0.456,0.467v9.094L8.443,9.553c-0.178-0.182-0.467-0.182-0.645,0c-0.178,0.184-0.178,0.479,0,0.662L9.513,11.973z"></path>
+						</svg> Download</a></div>
+     </div>
+  </div>
+ <div class="clearfix"></div>
+ </div>
+ 
+ 
+ 
+ 
+ 
+  <div class="item">
+  <div class="thumbnail_preview">
+  <a href="https://camgirl.cloud/"><img src="bkup/assets/camgirlcloud_branding.jpg" alt="Camgirl.Cloud custom designs"/></a>
+  </div>
+  <div class="itemavailable">
+     <div class="info">
+        <h1><svg class="svg-icon-ttle" viewBox="0 0 20 20">
+		  <path d="M15.94,10.179l-2.437-0.325l1.62-7.379c0.047-0.235-0.132-0.458-0.372-0.458H5.25c-0.241,0-0.42,0.223-0.373,0.458l1.634,7.376L4.06,10.179c-0.312,0.041-0.446,0.425-0.214,0.649l2.864,2.759l-0.724,3.947c-0.058,0.315,0.277,0.554,0.559,0.401l3.457-1.916l3.456,1.916c-0.419-0.238,0.56,0.439,0.56-0.401l-0.725-3.947l2.863-2.759C16.388,10.604,16.254,10.22,15.94,10.179M10.381,2.778h3.902l-1.536,6.977L12.036,9.66l-1.655-3.546V2.778z M5.717,2.778h3.903v3.335L7.965,9.66L7.268,9.753L5.717,2.778zM12.618,13.182c-0.092,0.088-0.134,0.217-0.11,0.343l0.615,3.356l-2.938-1.629c-0.057-0.03-0.122-0.048-0.184-0.048c-0.063,0-0.128,0.018-0.185,0.048l-2.938,1.629l0.616-3.356c0.022-0.126-0.019-0.255-0.11-0.343l-2.441-2.354l3.329-0.441c0.128-0.017,0.24-0.099,0.295-0.215l1.435-3.073l1.435,3.073c0.055,0.116,0.167,0.198,0.294,0.215l3.329,0.441L12.618,13.182z"></path>
+						</svg> Advertising</h1>
+        <div class="content"><p>Try <strong>Camgirl Live Editor</strong> tool for webcam performers</p>
+        <p>Choose from hundreds of ready-made templates for camgirls, camboys and studio owners</p>
+        </div>
+        <div class="dnld igni"><a href="https://camgirl.cloud/"><svg class="svg-icon-download" viewBox="0 0 20 20">
+							<path d="M14.38,3.467l0.232-0.633c0.086-0.226-0.031-0.477-0.264-0.559c-0.229-0.081-0.48,0.033-0.562,0.262l-0.234,0.631C10.695,2.38,7.648,3.89,6.616,6.689l-1.447,3.93l-2.664,1.227c-0.354,0.166-0.337,0.672,0.035,0.805l4.811,1.729c-0.19,1.119,0.445,2.25,1.561,2.65c1.119,0.402,2.341-0.059,2.923-1.039l4.811,1.73c0,0.002,0.002,0.002,0.002,0.002c0.23,0.082,0.484-0.033,0.568-0.262c0.049-0.129,0.029-0.266-0.041-0.377l-1.219-2.586l1.447-3.932C18.435,7.768,17.085,4.676,14.38,3.467 M9.215,16.211c-0.658-0.234-1.054-0.869-1.014-1.523l2.784,0.998C10.588,16.215,9.871,16.447,9.215,16.211 M16.573,10.27l-1.51,4.1c-0.041,0.107-0.037,0.227,0.012,0.33l0.871,1.844l-4.184-1.506l-3.734-1.342l-4.185-1.504l1.864-0.857c0.104-0.049,0.188-0.139,0.229-0.248l1.51-4.098c0.916-2.487,3.708-3.773,6.222-2.868C16.187,5.024,17.489,7.783,16.573,10.27"></path>
+						</svg> Visit Website</a></div>
+     </div>
+  </div>
+ <div class="clearfix"></div>
+ </div>
+ 
+ 
+ 
+ 
+
+ 
+  
+</div>
+
+<div class="totop"><a href="#"><svg class="svg-icon-top" viewBox="0 0 20 20">
+							<path d="M13.889,11.611c-0.17,0.17-0.443,0.17-0.612,0l-3.189-3.187l-3.363,3.36c-0.171,0.171-0.441,0.171-0.612,0c-0.172-0.169-0.172-0.443,0-0.611l3.667-3.669c0.17-0.17,0.445-0.172,0.614,0l3.496,3.493C14.058,11.167,14.061,11.443,13.889,11.611 M18.25,10c0,4.558-3.693,8.25-8.25,8.25c-4.557,0-8.25-3.692-8.25-8.25c0-4.557,3.693-8.25,8.25-8.25C14.557,1.75,18.25,5.443,18.25,10 M17.383,10c0-4.07-3.312-7.382-7.383-7.382S2.618,5.93,2.618,10S5.93,17.381,10,17.381S17.383,14.07,17.383,10"></path>
+						</svg></a></div>
+
+<div class="pagination">
+   <a href="#" class="active">Home</a>
+   <a href="p1.html">1</a>
+   <a href="p2.html">2</a>
+  <span style="display:none;">
+   <a href="#">3</a>
+   <a href="#">4</a>
+   <a href="#">5</a>
+   </span>
+ </div>
+
+
+
+<div id="footer">
+
+<div class="hero">
+   <h2>Camgirl.Cloud</h2>
+   <p>These resources (or at least some of them) are used on Camgirl.Cloud website as graphic elements in custom designs</p>
+ </div>
+
+
+   <div class="hero tcenter brand">
+        <a href="https://camgirl.cloud/editor/" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 306 90" width="306" height="90">
+	<style>
+		tspan { white-space:pre }
+		.shp0 { fill: #ffffff }
+		#camgirlcloud_logo{opacity:.5;} 
+	</style>
+	<path id="camgirlcloud_logo" class="shp0" d="M151.59 0C166.84 7 182.1 14 197.34 21C197.34 27.8 197.34 34.6 197.34 41.4C203.68 10.85 227.12 21.56 256.44 16.2C255.29 19.71 252.17 20.95 248.18 21.6C248.18 21.8 248.18 22 248.18 22.2C261.59 22.32 272.77 18.15 281.85 13.8C280.97 14.95 281.79 14.16 280.58 15C274.53 20.52 265.34 20.28 257.07 24C277.57 24.35 291.77 19.52 306 15C306 15.8 306 16.6 306 17.4C292.46 25.86 280.57 23.14 265.97 29.4C278.04 29.4 290.12 29.4 302.19 29.4C292.23 30.4 282.28 31.4 272.32 32.4C262.79 32.6 253.26 32.8 243.73 33C254.95 35.2 266.18 37.4 277.41 39.6C285.88 39.8 294.35 40 302.82 40.2C302.82 40.4 302.82 40.6 302.82 40.8C301.81 42.42 302.61 41.63 300.92 42.6C286.74 49.41 260.71 43.02 246.27 41.4C246.27 41.6 246.27 41.8 246.27 42C246.69 42 247.12 42 247.54 42C254.38 45.82 264.66 47.9 273.59 49.2C273.59 49.4 273.59 49.6 273.59 49.8C260.1 49.47 249.21 45.2 238.65 42C238.86 42.4 239.07 42.8 239.28 43.2C250.04 47.87 261.07 56.86 271.69 63C270.77 65.86 272.13 64.5 269.15 65.4C253.21 60.57 244.03 53.77 231.66 46.8C236.74 51.8 241.82 56.8 246.91 61.8C238.13 57.15 232.96 49.36 225.3 43.8C228.47 52.76 233.63 60.2 236.1 68.4C225.2 65.71 222.43 52.54 216.41 45C218.95 51.2 221.49 57.4 224.03 63.6C222.81 62.76 223.65 63.54 222.76 62.4C218.93 58.83 215.75 51.94 214.5 46.2C214.29 46.2 214.08 46.2 213.86 46.2C213.91 52.96 215.65 58.5 217.68 63.6C217.25 64 216.83 64.4 216.41 64.8C215.35 64 214.29 63.2 213.23 62.4C211.32 58.4 209.42 54.4 207.51 50.4C207.3 50.4 207.09 50.4 206.87 50.4C207.51 53 208.15 55.6 208.78 58.2C206.88 56.59 206.06 53.3 205.6 50.4C205.39 50.4 205.18 50.4 204.97 50.4C204.97 52.2 204.97 54 204.97 55.8C204.55 55.6 204.12 55.4 203.7 55.2C202.98 52.32 199.73 46.83 196.71 45.6C196.92 53.2 197.13 60.8 197.34 68.4C196.92 68.6 196.5 68.8 196.07 69C181.88 76 167.69 83 153.5 90C138.89 83 124.27 76 109.66 69C109.44 61.2 109.23 53.4 109.02 45.6C108.81 45.6 108.6 45.6 108.39 45.6C108.08 49.87 105.03 53.21 102.03 55.8C101.82 54 101.61 52.2 101.4 50.4C100.55 53 99.7 55.6 98.85 58.2C99.28 55.6 99.7 53 100.12 50.4C99.91 50.4 99.7 50.4 99.49 50.4C98.41 55.81 94.6 61.95 90.59 64.8C90.17 64.4 89.75 64 89.32 63.6C90.98 59.46 94.51 51.1 92.5 46.2C91.45 51.95 87.47 60.84 82.97 63.6C85.51 57.4 88.05 51.2 90.59 45C90.38 45 90.17 45 89.96 45C87.46 53.01 79.68 66.39 70.9 68.4C73.03 60.43 78.37 52.39 81.7 43.8C74.02 49.33 68.84 57.09 60.09 61.8C65.18 56.8 70.26 51.8 75.34 46.8C71.2 49.15 40.61 70.88 35.31 63.6C35.31 63.4 35.31 63.2 35.31 63C46.57 56.86 59.93 50.9 68.35 42C60.09 44.39 43.52 52.49 33.41 49.2C42.51 46.8 51.62 44.4 60.73 42C60.73 41.8 60.73 41.6 60.73 41.4C43.21 43.22 22.79 46.46 4.81 42.6C4.6 42 4.39 41.4 4.18 40.8C4.39 40.4 4.6 40 4.81 39.6C27.59 40.86 44.48 35.26 63.27 33C46.96 27.21 19.59 35.86 4.81 28.8C16.26 29.1 29.26 30.83 41.03 29.4C41.03 29.2 41.03 29 41.03 28.8C25.41 28.47 10.55 23.79 1 17.4C1 16.6 1 15.8 1 15C1.21 15 1.42 15 1.64 15C9.39 18.54 37.23 28.15 49.93 23.4C41.33 23.11 28.79 19.08 25.15 13.8C31.93 16.97 48.81 25.23 58.82 21.6C54.85 21.02 51.67 19.66 50.56 16.2C79.58 21.45 101.07 10.86 109.02 39.6C109.23 39.6 109.44 39.6 109.66 39.6C109.66 33.4 109.66 27.2 109.66 21C123.63 14 137.62 7 151.59 0ZM151.59 4.2C138.67 11 125.75 17.8 112.83 24.6C112.83 38.4 112.83 52.2 112.83 66C126.6 72.6 140.37 79.2 154.14 85.8C167.27 79.4 180.4 73 193.53 66.6C193.53 52.2 193.53 37.8 193.53 23.4C179.55 17 165.57 10.6 151.59 4.2ZM177.01 60.6C161.13 60.6 145.24 60.6 129.35 60.6C129.66 51.95 129.95 42.61 126.18 37.8C124.02 35.83 120.69 34.97 118.55 33C118.57 29.11 119.08 27.79 121.73 26.4C123.42 26.2 125.12 26 126.81 25.8C127.87 26.6 128.93 27.4 129.99 28.2C130.06 31.96 129.38 33.84 130.62 36.6C134.86 38 139.1 39.4 143.33 40.8C146.09 36.8 148.84 32.8 151.59 28.8C148.85 27.64 147.35 24.91 149.05 21.6C150.28 19.01 153.17 17.59 156.68 19.2C162.37 21.97 157.81 27.84 158.58 30C161.12 33.6 163.67 37.2 166.21 40.8C170.44 39.2 174.68 37.6 178.92 36C177.68 33.49 177.22 32.32 177.65 29.4C178.49 28.4 179.34 27.4 180.19 26.4C183.71 26.21 184.06 26.29 187.18 27C188.31 29.08 189.6 30.95 188.45 33.6C186.4 37.18 182.42 36.44 180.19 39.6C177.18 44.26 176.94 53.27 177.01 60.6ZM59.46 22.2C59.88 22.4 60.31 22.6 60.73 22.8C60.31 22.6 59.88 22.4 59.46 22.2ZM246.27 22.2C246.69 22.4 247.12 22.6 247.54 22.8C247.12 22.6 246.69 22.4 246.27 22.2ZM153.5 34.8C151.92 37.49 148.73 40.56 150.32 42.6C151.38 44.6 152.44 46.6 153.5 48.6C153.71 48.2 153.92 47.8 154.14 47.4C155.62 45.8 157.1 44.2 158.58 42.6C156.89 40 155.19 37.4 153.5 34.8ZM93.14 44.4C93.14 44.8 93.14 45.2 93.14 45.6C93.14 45.2 93.14 44.8 93.14 44.4ZM213.23 44.4C213.23 44.8 213.23 45.2 213.23 45.6C213.23 45.2 213.23 44.8 213.23 44.4ZM100.12 48.6C100.12 49 100.12 49.4 100.12 49.8C100.12 49.4 100.12 49 100.12 48.6ZM206.24 48.6C206.24 49 206.24 49.4 206.24 49.8C206.24 49.4 206.24 49 206.24 48.6ZM136.34 52.8C136.13 53.2 135.92 53.6 135.71 54C136.89 53.25 136.06 53.46 136.34 52.8ZM171.29 53.4C171.72 53.6 172.14 53.8 172.56 54C172.14 53.8 171.72 53.6 171.29 53.4ZM129.99 62.4C145.45 62.4 160.91 62.4 176.37 62.4C176.37 64 176.37 65.6 176.37 67.2C160.91 67.2 145.45 67.2 129.99 67.2C129.99 65.6 129.99 64 129.99 62.4Z" />
+</svg></a>
+<span class="icons"><a href="https://twitter.com/CamgirlCloud" target="_blank"><svg class="svg-icon-twt" viewBox="0 0 20 20">
+							<path fill="none" d="M18.258,3.266c-0.693,0.405-1.46,0.698-2.277,0.857c-0.653-0.686-1.586-1.115-2.618-1.115c-1.98,0-3.586,1.581-3.586,3.53c0,0.276,0.031,0.545,0.092,0.805C6.888,7.195,4.245,5.79,2.476,3.654C2.167,4.176,1.99,4.781,1.99,5.429c0,1.224,0.633,2.305,1.596,2.938C2.999,8.349,2.445,8.19,1.961,7.925C1.96,7.94,1.96,7.954,1.96,7.97c0,1.71,1.237,3.138,2.877,3.462c-0.301,0.08-0.617,0.123-0.945,0.123c-0.23,0-0.456-0.021-0.674-0.062c0.456,1.402,1.781,2.422,3.35,2.451c-1.228,0.947-2.773,1.512-4.454,1.512c-0.291,0-0.575-0.016-0.855-0.049c1.588,1,3.473,1.586,5.498,1.586c6.598,0,10.205-5.379,10.205-10.045c0-0.153-0.003-0.305-0.01-0.456c0.7-0.499,1.308-1.12,1.789-1.827c-0.644,0.28-1.334,0.469-2.06,0.555C17.422,4.782,17.99,4.091,18.258,3.266"></path>
+						</svg></a>  <a href="https://www.youtube.com/c/CamgirlLiveEditor" target="_blank"><svg class="svg-icon-twt" viewBox="0 0 20 20">
+							<path fill="none" d="M9.426,7.625h0.271c0.596,0,1.079-0.48,1.079-1.073V4.808c0-0.593-0.483-1.073-1.079-1.073H9.426c-0.597,0-1.079,0.48-1.079,1.073v1.745C8.347,7.145,8.83,7.625,9.426,7.625 M9.156,4.741c0-0.222,0.182-0.402,0.404-0.402c0.225,0,0.405,0.18,0.405,0.402V6.62c0,0.222-0.181,0.402-0.405,0.402c-0.223,0-0.404-0.181-0.404-0.402V4.741z M12.126,7.625c0.539,0,1.013-0.47,1.013-0.47v0.403h0.81V3.735h-0.81v2.952c0,0-0.271,0.335-0.54,0.335c-0.271,0-0.271-0.202-0.271-0.202V3.735h-0.81v3.354C11.519,7.089,11.586,7.625,12.126,7.625 M6.254,7.559H7.2v-2.08l1.079-2.952H7.401L6.727,4.473L6.052,2.527H5.107l1.146,2.952V7.559z M11.586,12.003c-0.175,0-0.312,0.104-0.405,0.204v2.706c0.086,0.091,0.213,0.18,0.405,0.18c0.405,0,0.405-0.451,0.405-0.451v-2.188C11.991,12.453,11.924,12.003,11.586,12.003 M14.961,8.463c0,0-2.477-0.129-4.961-0.129c-2.475,0-4.96,0.129-4.96,0.129c-1.119,0-2.025,0.864-2.025,1.93c0,0-0.203,1.252-0.203,2.511c0,1.252,0.203,2.51,0.203,2.51c0,1.066,0.906,1.931,2.025,1.931c0,0,2.438,0.129,4.96,0.129c2.437,0,4.961-0.129,4.961-0.129c1.117,0,2.024-0.864,2.024-1.931c0,0,0.202-1.268,0.202-2.51c0-1.268-0.202-2.511-0.202-2.511C16.985,9.328,16.078,8.463,14.961,8.463 M7.065,10.651H6.052v5.085H5.107v-5.085H4.095V9.814h2.97V10.651z M9.628,15.736h-0.81v-0.386c0,0-0.472,0.45-1.012,0.45c-0.54,0-0.606-0.515-0.606-0.515v-3.991h0.809v3.733c0,0,0,0.193,0.271,0.193c0.27,0,0.54-0.322,0.54-0.322v-3.604h0.81V15.736z M12.801,14.771c0,0,0,1.03-0.742,1.03c-0.455,0-0.73-0.241-0.878-0.429v0.364h-0.876V9.814h0.876v1.92c0.135-0.142,0.464-0.439,0.878-0.439c0.54,0,0.742,0.45,0.742,1.03V14.771z M15.973,12.39v1.287h-1.688v0.965c0,0,0,0.451,0.405,0.451s0.405-0.451,0.405-0.451v-0.45h0.877v0.708c0,0-0.136,0.901-1.215,0.901c-1.08,0-1.282-0.901-1.282-0.901v-2.51c0,0,0-1.095,1.282-1.095S15.973,12.39,15.973,12.39 M14.69,12.003c-0.405,0-0.405,0.45-0.405,0.45v0.579h0.811v-0.579C15.096,12.453,15.096,12.003,14.69,12.003"></path>
+						</svg></a>  <a href="https://dandesign.camgirl.cloud/" target="_blank"><svg class="svg-icon-twt" viewBox="0 0 20 20">
+							<path fill="none" d="M12.443,9.672c0.203-0.496,0.329-1.052,0.329-1.652c0-1.969-1.241-3.565-2.772-3.565S7.228,6.051,7.228,8.02c0,0.599,0.126,1.156,0.33,1.652c-1.379,0.555-2.31,1.553-2.31,2.704c0,1.75,2.128,3.169,4.753,3.169c2.624,0,4.753-1.419,4.753-3.169C14.753,11.225,13.821,10.227,12.443,9.672z M10,5.247c1.094,0,1.98,1.242,1.98,2.773c0,1.531-0.887,2.772-1.98,2.772S8.02,9.551,8.02,8.02C8.02,6.489,8.906,5.247,10,5.247z M10,14.753c-2.187,0-3.96-1.063-3.96-2.377c0-0.854,0.757-1.596,1.885-2.015c0.508,0.745,1.245,1.224,2.076,1.224s1.567-0.479,2.076-1.224c1.127,0.418,1.885,1.162,1.885,2.015C13.961,13.689,12.188,14.753,10,14.753z M10,0.891c-5.031,0-9.109,4.079-9.109,9.109c0,5.031,4.079,9.109,9.109,9.109c5.031,0,9.109-4.078,9.109-9.109C19.109,4.969,15.031,0.891,10,0.891z M10,18.317c-4.593,0-8.317-3.725-8.317-8.317c0-4.593,3.724-8.317,8.317-8.317c4.593,0,8.317,3.724,8.317,8.317C18.317,14.593,14.593,18.317,10,18.317z"></path>
+						</svg></a></span>
+    </div>
+    
+ <div class="clearfix"></div
+></div>
+
+</body>
+</html>
